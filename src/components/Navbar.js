@@ -18,8 +18,20 @@ const Navbar = () => (
         <Link className="navbar-item" to="/about">
           About
         </Link>
-        <Link className="navbar-item" to="/products">
-          Products
+        <Link className="navbar-item" to="/calendar">
+          Calendar
+        </Link>
+        <Link className="navbar-item" to="/news">
+          News
+        </Link>
+        <Link className="navbar-item" to="/video">
+          Video
+        </Link>
+        <Link className="navbar-item" to="/photos">
+          Photos
+        </Link>
+        <Link className="navbar-item" to="/contact">
+          Contact
         </Link>
       </div>
       <div className="navbar-end">
