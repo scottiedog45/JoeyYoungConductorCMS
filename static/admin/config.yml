@@ -19,6 +19,18 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+
+  - name: "engagements"
+    label: "Upcoming Engagements"
+    folder: "src/pages/engagements"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}-{{time}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "engagements-page"}
+      - {label: "Engagements", name: engagements, widget: "list", fields: [{label: "Date", name: "date", widget: "date"},{label: "Location", name: "location", widget: "string"},{label: "Program", name: "program", widget: "markdown"}]}
+
+
+
   - name: "pages"
     label: "Pages"
     files:
