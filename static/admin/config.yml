@@ -28,7 +28,9 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "engagements-page"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Engagements", name: engagements, widget: "list", fields: [{label: "Date", name: "date and time", widget: "datetime"},{label: "Location", name: "location", widget: "string"},{label: "Program", name: "program", widget: "markdown"}]}
+      - {label: "Date", name: "date and time", widget: "datetime"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Program", name: "program", widget: "markdown"}
 
 
 
