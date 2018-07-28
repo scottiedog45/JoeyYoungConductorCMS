@@ -32,7 +32,9 @@ const Engagement = ({ data }) => {
     <EngagementTemplate
       content={post.html}
       contentComponent={HTMLContent}
+      location={post.frontmatter.location}
       date = {post.frontmatter.date}
+      program = {post.frontmatter.program}
       title={post.frontmatter.title}
       helmet={<Helmet title={`${post.frontmatter.date} | Concert`} />}
       />
