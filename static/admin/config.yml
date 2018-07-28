@@ -24,7 +24,6 @@ collections:
     label: "Upcoming Engagements"
     folder: "src/pages/calendar"
     create: true
-    slug: {{slug}}
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "engagement"}
       - {label: "Title", name: "title", widget: "string"}
