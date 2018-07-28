@@ -33,6 +33,7 @@ const Engagement = ({ data }) => {
       content={post.html}
       contentComponent={HTMLContent}
       date = {post.frontmatter.date}
+      title={post.frontmatter.title}
       helmet={<Helmet title={`${post.frontmatter.date} | Concert`} />}
       />
   )
