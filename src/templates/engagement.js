@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import Content, {HTMLContent} from '../components/Content'
 
 export const EngagementTemplate = ({
@@ -18,6 +17,7 @@ export const EngagementTemplate = ({
     {helmet || ''}
     <div className='container content'>
     <div>{date}</div>
+    <EngagementContent content={content} />
     <div>{location}</div>
     <div>{program}</div>
     </div>
