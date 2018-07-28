@@ -26,14 +26,14 @@ export const EngagementTemplate = ({
 }
 
 const Engagement = ({ data }) => {
-  const { markdownRemark: engagement} = data
+  const { markdownRemark: post} = data
 
   return (
     <EngagementTemplate
-      content={engagement.html}
+      content={post.html}
       contentComponent={HTMLContent}
-      date = {engagement.frontmatter.date}
-      helmet={<Helmet title={`${engagement.frontmatter.date} | Concert`} />}
+      date = {post.frontmatter.date}
+      helmet={<Helmet title={`${post.frontmatter.date} | Concert`} />}
       />
   )
 }
