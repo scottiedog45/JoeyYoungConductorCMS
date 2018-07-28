@@ -44,7 +44,7 @@ export const pageQuery = graphql`
   query EngagementByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id 
-      htl
+      html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
