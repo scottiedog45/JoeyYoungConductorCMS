@@ -22,13 +22,13 @@ collections:
 
   - name: "engagements"
     label: "Upcoming Engagements"
-    folder: "src/pages/engagements"
+    folder: "src/pages/calendar"
     create: true
     slug: {{slug}}
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "engagements-page"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "engagement"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date and time", widget: "datetime"}
+      - {label: "Date", name: "dateTime", widget: "datetime"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Program", name: "program", widget: "markdown"}
 
