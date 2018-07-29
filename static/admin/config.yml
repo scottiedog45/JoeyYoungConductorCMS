@@ -29,7 +29,9 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "dateTime", widget: "datetime"}
       - {label: "Location", name: "location", widget: "string"}
+      - {label: "Link to Event", name: "eventLink", widget: "string"}
       - {label: "Program", name: "program", widget: "markdown"}
+
 
 
 
@@ -39,6 +41,7 @@ collections:
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
+        create: true
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
@@ -46,6 +49,7 @@ collections:
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
+        create: true
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
           - {label: Title, name: title, widget: string}
