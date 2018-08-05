@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'React'
 import Link from 'gatsby-link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 const SocialMediaNavbar = () => (
-  <nav className="navbar is-transparent">
+  <nav className="socialNav navbar is-transparent">
     <div className="container">
       <div className="navbar-start">
         <Link className="navbar-item" to="/twitter">
-          TWIT
+        <FontAwesomeIcon icon={faTwitter} />
         </Link>
         <Link className="navbar-item" to="/instagram">
-          INSTA
+        <FontAwesomeIcon icon={faInstagram} />
         </Link>
         <Link className="navbar-item" to="/facebook">
-          FB
+        <FontAwesomeIcon icon={faFacebook} />
         </Link>
       </div>
       <div className="navbar-end">
