@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import Link from 'gatsby-link'
 
 import logo from '../img/logo.svg'
