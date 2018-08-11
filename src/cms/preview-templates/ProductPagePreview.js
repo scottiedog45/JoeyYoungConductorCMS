@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'React'
 import PropTypes from 'prop-types'
 import { ProductPageTemplate } from '../../templates/product-page'
 
