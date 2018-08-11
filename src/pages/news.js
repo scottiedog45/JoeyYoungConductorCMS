@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import backgroundImage from '../img/newsPage.jpg'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -8,9 +9,13 @@ export default class IndexPage extends React.Component {
     const { edges: articles } = data.allMarkdownRemark
 
     return (
+      <div>
+       <div className='newsBackgroundContainer'></div>
       <section className="section">
+      
         <div className="container">
           <div className="content">
+         
             <h1 className="has-text-weight-bold is-size-2">News</h1>
           </div>
           {articles
@@ -32,6 +37,7 @@ export default class IndexPage extends React.Component {
             ))}
         </div>
       </section>
+      </div>
     )
   }
 }

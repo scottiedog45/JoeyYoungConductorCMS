@@ -1,5 +1,11 @@
 import React from 'react'
 
-const BackgroundImage = ({pictureSource}) => (
-    <img src={pictureSource} />
-)
+export default class BackgroundImage extends React.Component {
+    render () {
+        return (
+            <div className='picContainer'>
+                <img src={this.props.picSource} />
+            </div>
+        )
+    }
+}
