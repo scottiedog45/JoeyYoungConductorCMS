@@ -2,19 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
-export default class ArticlePage extends React.Component {
+export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: articles } = data.allMarkdownRemark
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <section className="section">
         <div className="container">
           <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">News</h1>
+            <h1 className="has-text-weight-bold is-size-2">Engagements</h1>
           </div>
-          {articles
-            .map(({ node: article }) => (
+          {posts
+            .map(({ node: post }) => (
               <div
                 className="content"
                 style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
@@ -22,13 +22,18 @@ export default class ArticlePage extends React.Component {
               >
                 <p>
                   <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
+                    {post.frontmatter.date}
                   </Link>
+                  <span> &bull; </span>
+                  <small>{post.frontmatter.date}</small>
                 </p>
                 <p>
-                  {post.frontmatter.blurb}
+                  {post.frontmatter.program}
                   <br />
                   <br />
+                  <Link className="button is-small" to={post.frontmatter.eventLink}>
+                    more information...
+                  </Link>
                 </p>
               </div>
             ))}
@@ -38,7 +43,7 @@ export default class ArticlePage extends React.Component {
   }
 }
 
-ArticlePage.propTypes = {
+IndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -50,7 +55,7 @@ export const pageQuery = graphql`
   query CalendarQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "article" } }}
+      filter: { frontmatter: { templateKey: { eq: "engagement" } }}
     ) {
       edges {
         node {
@@ -60,9 +65,10 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            title
-            blurb
+            eventLink
+            program
             templateKey
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }
