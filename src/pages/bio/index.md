@@ -1,5 +1,5 @@
 ---
 templateKey: bio-page
-title: bio
+title: bioasdfasdf
 ---
-This would be Joey's bio.
+This would be Joey's bio.asdfasdf
