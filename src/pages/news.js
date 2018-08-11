@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
-export default class ArticlePage extends React.Component {
+export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: articles } = data.allMarkdownRemark
@@ -36,7 +36,7 @@ export default class ArticlePage extends React.Component {
   }
 }
 
-ArticlePage.propTypes = {
+IndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
