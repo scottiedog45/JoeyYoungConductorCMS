@@ -31,7 +31,16 @@ collections:
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Link to Event", name: "eventLink", widget: "string"}
       - {label: "Program", name: "program", widget: "markdown"}
+      
 
+  - name: "news"
+    lablel: "News"
+    folder: "src/pages/news"
+    create: true
+    fields: 
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "article"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Blurb", name: "blurb", widget: "string"}
 
 
 

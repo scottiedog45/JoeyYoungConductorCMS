@@ -13,20 +13,18 @@ export default class ArticlePage extends React.Component {
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">News</h1>
           </div>
-          {articles
+          {posts
             .map(({ node: article }) => (
               <div
                 className="content"
                 style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                key={post.id}
+                key={article.id}
               >
                 <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
+                  <small>{article.frontmatter.title}</small>
                 </p>
                 <p>
-                  {post.frontmatter.blurb}
+                  {article.frontmatter.blurb}
                   <br />
                   <br />
                 </p>
@@ -50,7 +48,7 @@ export const pageQuery = graphql`
   query CalendarQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "article" } }}
+      filter: { frontmatter: { templateKey: { eq: "engagement" } }}
     ) {
       edges {
         node {
