@@ -13,7 +13,7 @@ export default class IndexPage extends React.Component {
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">News</h1>
           </div>
-          {posts
+          {articles
             .map(({ node: article }) => (
               <div
                 className="content"
