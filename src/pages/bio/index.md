@@ -1,7 +1,5 @@
 ---
-templateKey: 'bio-page'
-path: /bio
-title: bio
+templateKey: bio-page
+title: bioasdfasdf
 ---
-
-This would be Joey's bio
+This would be Joey's bio.asdfasdf
