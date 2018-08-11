@@ -34,7 +34,7 @@ collections:
       
 
   - name: "news"
-    lablel: "News"
+    label: "News"
     folder: "src/pages/news"
     create: true
     fields: 
