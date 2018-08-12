@@ -1,5 +1,5 @@
 ---
-templateKey: pics
+templateKey: 'pic-page'
 path: /pics
 images:
  - image: /img/coffee.png
