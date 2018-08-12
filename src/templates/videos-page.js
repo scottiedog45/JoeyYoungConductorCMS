@@ -16,7 +16,7 @@ const VideoPage = ({ data }) => {
 
   return (
     <VideoPageTemplate
-      videos={frontmatter.vidoes}
+      videos={frontmatter.videos}
     />
   )
 }
