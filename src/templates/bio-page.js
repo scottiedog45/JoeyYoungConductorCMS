@@ -1,4 +1,4 @@
-import React from '../../node_modules/@types/React'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
 
