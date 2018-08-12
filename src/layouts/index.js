@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import Helmet from '../../../../Library/Caches/typescript/2.9/node_modules/@types/react-helmet'
 
 import SocialMediaNavbar from '../components/SocialMediaNavbar'
 import Navbar from '../components/Navbar'

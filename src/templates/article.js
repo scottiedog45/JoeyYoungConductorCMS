@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import Helmet from '../../../../Library/Caches/typescript/2.9/node_modules/@types/react-helmet'
 import Content, {HTMLContent} from '../components/Content'
 
 export const ArticleTemplate = ({

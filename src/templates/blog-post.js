@@ -1,8 +1,8 @@
-import React from 'react'
+import React from '../../node_modules/@types/React'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import { kebabCase } from '../../../../Library/Caches/typescript/2.9/node_modules/@types/lodash'
+import Helmet from '../../../../Library/Caches/typescript/2.9/node_modules/@types/react-helmet'
+import Link from '../../node_modules/gatsby-link'
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({

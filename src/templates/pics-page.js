@@ -10,29 +10,6 @@ export const PicPageTemplate = ({
   </section>
 )
 
-// ProductPageTemplate.propTypes = {
-//   image: PropTypes.string,
-//   title: PropTypes.string,
-//   heading: PropTypes.string,
-//   description: PropTypes.string,
-//   intro: PropTypes.shape({
-//     blurbs: PropTypes.array,
-//   }),
-//   main: PropTypes.shape({
-//     heading: PropTypes.string,
-//     description: PropTypes.string,
-//     image1: PropTypes.object,
-//     image2: PropTypes.object,
-//     image3: PropTypes.object,
-//   }),
-//   testimonials: PropTypes.array,
-//   fullImage: PropTypes.string,
-//   pricing: PropTypes.shape({
-//     heading: PropTypes.string,
-//     description: PropTypes.string,
-//     plans: PropTypes.array,
-//   }),
-// }
 
 const PicPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark

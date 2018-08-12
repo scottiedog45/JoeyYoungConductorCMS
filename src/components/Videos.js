@@ -4,7 +4,7 @@ import { v4 } from 'uuid'
 
 const Videos = ({ videos }) => (
   <div>
-    {videos.map(videos => (
+    {videos.map(video => (
       <div key={v4()} className="message">
         <p className="message-body" >
           {video.videoUrl}
