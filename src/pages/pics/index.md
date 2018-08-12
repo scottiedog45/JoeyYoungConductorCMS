@@ -1,8 +1,9 @@
 ---
-templateKey: 'pics-page'
-path: /pics
-images:
- - image: /img/coffee.png
-   alt: coffe picccccc
+templateKey: pics-page
+pics:
+  - alt: other thing
+    image: /img/coffee.png
+  - alt: Thing
+    image: /img/screen-shot-2018-08-04-at-10.18.04-pm.png
 ---
 
