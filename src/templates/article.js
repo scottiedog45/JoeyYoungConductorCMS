@@ -13,12 +13,12 @@ export const ArticleTemplate = ({
 
   return (
     <section className='section'>
-    {helmet || ''}
-    <div className='container content'>
-    <div>{title}</div>
-    <ArticleContent content={content} />
-    <div>{blurb}</div>
-    </div>
+      {helmet || ''}
+        <div className='container content'>
+         <div>{title}</div>
+        <ArticleContent content={content} />
+        <div>{blurb}</div>
+      </div>
     </section>
   )
 }

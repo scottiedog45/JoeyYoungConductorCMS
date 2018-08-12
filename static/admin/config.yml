@@ -37,7 +37,7 @@ collections:
         create: true
         fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "videos-page"}
-        - {label: "Videos", name: "videos", widget: "list", fields: [{label: "videoUrl", name: "videoUrl", widget: "string"}, {label: "Text Description", name: "textDescription", widget: "string"}]}
+        - {label: "Videos", name: "videos", widget: "list", fields: [{label: "Video Url", name: "videoUrl", widget: "string"}, {label: "Text Description", name: "textDescription", widget: "string"}]}
       - file: "src/pages/pics/index.md"
         label: "Pics"
         name: "pics"

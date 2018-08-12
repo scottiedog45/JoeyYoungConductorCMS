@@ -1,5 +1,5 @@
 ---
-templateKey: 'video-page'
+templateKey: 'videos-page'
 path: /videos
 videos:
  - videoUrl: google.com
