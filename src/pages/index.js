@@ -23,7 +23,5 @@ export default class IndexPage extends React.Component {
 
 
 
-IndexPage.propTypes = {
-  
-}
+
 

@@ -39,8 +39,7 @@ const VideoPage = ({ data }) => {
 
   return (
     <VideoPageTemplate
-      videoUrl={frontmatter.videoUrl}
-      textDescription={frontmatter.textDescription}
+      videos={frontmatter.vidoes}
     />
   )
 }

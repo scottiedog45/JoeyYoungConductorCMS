@@ -39,7 +39,6 @@ const PicPage = ({ data }) => {
 
   return (
     <PicPageTemplate
-      title={frontmatter.title}
       images={frontmatter.images}
     />
   )
