@@ -16,10 +16,10 @@ const Navbar = () => (
         <Link className="navbar-item" to="/news">
           News
         </Link>
-        <Link className="navbar-item" to="/video">
+        <Link className="navbar-item" to="/videos">
           Video
         </Link>
-        <Link className="navbar-item" to="/photos">
+        <Link className="navbar-item" to="/pics">
           Photos
         </Link>
         <Link className="navbar-item" to="/contact">
