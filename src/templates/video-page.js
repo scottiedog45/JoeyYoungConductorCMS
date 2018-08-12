@@ -34,7 +34,7 @@ export const VideoPageTemplate = ({
 //   }),
 // }
 
-const VideosPage = ({ data }) => {
+const VideoPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
