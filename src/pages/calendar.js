@@ -11,7 +11,7 @@ export default class IndexPage extends React.Component {
     return (
       <div>
         <div className='calendarPicContainer'>
-          {/* <img className='calendarBackgroundImage' src={backgroundImage} /> */}
+          
         </div>
       <section className="section">
         <div className="container">

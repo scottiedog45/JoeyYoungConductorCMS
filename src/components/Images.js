@@ -6,9 +6,7 @@ const Images = ({ images }) => (
   <div>
     {images.map(image => (
       <div key={v4()} className="message">
-        <img className="message-body" alt={image.alt}>
-          {image.image}
-        </img>
+        <img src={image.image} className="message-body" alt={image.alt} />
       </div>
     ))}
   </div>
