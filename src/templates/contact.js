@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'React'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
 import backgroundImage from '../img/contact.jpg'
