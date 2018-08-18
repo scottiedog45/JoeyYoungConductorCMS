@@ -10,33 +10,33 @@ export default class IndexPage extends React.Component {
 
     return (
       <div>
-        <div className='calendarPicContainer'>
-          
-        </div>
-      <section className="section">
+        <div className='mobileBackgroundContainer' />
+        <div className='calendarPicContainer'></div>
+      <section className="section calendar-section">
         <div className="container">
           <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Engagements</h1>
+          <div className='styledTitle'>
+            CALENDAR
+            </div>
           </div>
           {posts
             .map(({ node: post }) => (
               <div
                 className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+                style={{padding: '2em 4em' }}
                 key={post.id}
               >
                 <p>
                   <Link className="has-text-primary" to={post.fields.slug}>
                     {post.frontmatter.date}
                   </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
+                  <small>{post.frontmatter.dateTime}</small>
                 </p>
                 <p>
                   {post.frontmatter.program}
                   <br />
                   <br />
-                  <Link className="button is-small" to={post.frontmatter.eventLink}>
+                  <Link to={post.frontmatter.eventLink}>
                     more information...
                   </Link>
                 </p>
@@ -74,7 +74,7 @@ export const pageQuery = graphql`
             eventLink
             program
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            dateTime(formatString: "MMMM DD, YYYY")
           }
         }
       }

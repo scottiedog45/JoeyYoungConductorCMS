@@ -1,7 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
-import backgroundImage from '../img/newsPage.jpg'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -10,19 +8,21 @@ export default class IndexPage extends React.Component {
 
     return (
       <div>
+        <div className='mobileBackgroundContainer'></div>
        <div className='newsBackgroundContainer'></div>
-      <section className="section">
+      <section className="section news-section">
       
         <div className="container">
           <div className="content">
-         
-            <h1 className="has-text-weight-bold is-size-2">News</h1>
+          <div className='styledTitle'>
+            NEWS
+            </div>
           </div>
           {articles
             .map(({ node: article }) => (
               <div
                 className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+                style={{padding: '1em 2em' }}
                 key={article.id}
               >
                 <p>

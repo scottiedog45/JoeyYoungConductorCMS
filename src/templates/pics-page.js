@@ -3,10 +3,15 @@ import PropTypes from 'prop-types'
 import Images from '../components/Images'
 
 export const PicPageTemplate = ({
-  images,
+  pics,
 }) => (
-  <section className="section section--gradient">
-              <Images images={images} />
+  <section className="pics-section section section--gradient">
+  <div className='content pics-page-content'>
+  <div className='styledTitle'>
+            PHOTOS
+            </div>
+              <Images pics={pics} />
+              </div>
   </section>
 )
 
@@ -16,7 +21,7 @@ const PicPage = ({ data }) => {
 
   return (
     <PicPageTemplate
-      images={frontmatter.images}
+      pics={frontmatter.pics}
     />
   )
 }
@@ -36,7 +41,7 @@ export const picPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        images {
+        pics {
           image
           alt
         }

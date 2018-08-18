@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { v4 } from 'uuid'
 
-const Images = ({ images }) => (
+const Images = ({ pics }) => (
   <div>
-    {images.map(image => (
+    {pics.map(pic => (
       <div key={v4()} className="message">
-        <img src={image.image} className="message-body" alt={image.alt} />
+        <img src={pic.image} className="message-body" alt={pic.alt} />
       </div>
     ))}
   </div>

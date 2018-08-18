@@ -5,8 +5,13 @@ import Videos from '../components/Videos'
 export const VideoPageTemplate = ({
   videos,
 }) => (
-  <section className="section section--gradient">
+  <section className="videos-section section section--gradient">
+  <div className='content video-content'>
+  <div className='styledTitle'>
+            VIDEO
+            </div>
               <Videos videos={videos} />
+              </div>
   </section>
 )
 

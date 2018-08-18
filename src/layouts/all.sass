@@ -12,29 +12,58 @@ $header-font: 'Poiret One', cursive
 $body-font: 'Open Sans', sans-serif
 
 
+//TODO need iphone x and iphone 6 plus diff styles
+//breakpoints
+$breakpoint-tablet-width: 1024px
+$breakpoint-tablet-height: 1366px
+$breakpoint-phone-width: 414px
+$breakpoint-phone-height: 736px
+
+
 html
   background-color: black !important
+ 
+body 
   color: white !important
 
 .navbar
   background-color: inherit !important
   font-size: 20px
+  @media screen and (max-width: $breakpoint-tablet-width) 
+    display: none
 
 .socialNav
   font-size: 30px
   margin-top: 30px
   float: right
   clear: right
+  @media screen and (max-width: $breakpoint-tablet-width) 
+    display: none
   a
     padding-left: 30px
+  
   
 .bioSection
   float: right
   clear: right
   width: 60vw
   font-family: $body-font
+  @media screen and (max-width: $breakpoint-tablet-width) 
+    float: unset
+    clear: unset
+    width: unset
 
-.bioBackgroundImage
+.pics-page-content
+  margin: auto
+  width: 80vw
+  @media screen and (max-width: $breakpoint-phone-width)
+    width: unset !important
+
+.video-content
+  margin: auto
+  width: 80vw
+  @media screen and (max-width: $breakpoint-phone-width)
+     width: unset !important
 
 
 .landingQuote 
@@ -47,9 +76,13 @@ html
   width: 50vw
   font-size: 30px
   font-family: $header-font
+  @media screen and (max-width: $breakpoint-tablet-width) 
+    display: none
 
 .landingQuoteAuthor
   font-size: 20px
+  @media screen and (max-width: $breakpoint-tablet-width) 
+    display: none
 
 .navbar-item
   color: white !important
@@ -60,14 +93,15 @@ html
   font-size: 12vw
   letter-spacing: 8px
   left: 31px
+  @media screen and (max-width: $breakpoint-tablet-width) 
+    width: 100%
+    text-align: right
+    bottom: unset !important
+    left: unset !important
+    font-size: 5vw
+    margin-top: 35vh
+    padding-right: 5vw
 
-.landingImage
-  position: absolute
-  z-index: -1
-  height: auto
-  width: auto
-  max-height: 103vh
-  bottom: 18px
 
 h1 
   font-family: $header-font
@@ -80,7 +114,43 @@ nav
   letter-spacing: 1.5px
   color: white
 
+section 
+  clear: right
 
+.landing-section
+  clear: unset !important
+
+.news-section
+  padding-top: 7rem !important
+
+.calendar-section
+  color: black !important
+  width: 50vw
+  float: right
+  @media screen and (max-width: $breakpoint-phone-width) 
+    width: unset
+    color: white !important
+    padding-top: 7rem !important
+    float: unset
+
+.contact-section
+  @media screen and (max-width: $breakpoint-phone-width)
+    padding-top: 7rem !important
+
+.videos-section
+  @media screen and (max-width: $breakpoint-phone-width)
+    padding-top: 7rem !important
+
+.pics-section
+  @media screen and (max-width: $breakpoint-phone-width)
+    padding-top: 7rem !important
+
+
+.styledTitle
+  font-family: $header-font
+  font-size: 10vh
+  @media screen and (max-width: $breakpoint-phone-width) 
+    font-size: 7vh
 
 .content .taglist
   list-style: none
@@ -114,11 +184,6 @@ nav
 .margin-top-0
   margin-top: 0 !important
 
-.contactInfo 
-
-.calendarBackgroundImage
-  
-
 .calendarPicContainer 
   background-image: url('../img/calendarPage.jpg')
   background-size: cover
@@ -127,6 +192,8 @@ nav
   height: 100vh
   width: 100vw
   max-width: unset !important 
+  @media screen and (max-width: $breakpoint-phone-width) 
+    display: none
 
 .newsBackgroundContainer
   background-image: url('../img/newsPage.jpg')
@@ -136,8 +203,129 @@ nav
   height: 100vh
   width: 100vw
   max-width: unset !important 
+  //phone styling
+  @media screen and (max-width: $breakpoint-phone-width) 
+    display: none
 
-  
-  
+.landingBackgroundContainer
+  background-image: url('../img/landingPage.jpg')
+  background-size: contain
+  background-repeat: no-repeat
+  position: absolute
+  z-index: -1
+  height: 100vh
+  width: 100vw
+  max-width: unset !important 
+  background-position-x: -122px
+  @media screen and (max-width: $breakpoint-phone-width) 
+    background-position-x: -322px
+    background-size: cover
+    background-repeat: unset
+
+.mobileBackgroundContainer
+  display: none
+  @media screen and (max-width: $breakpoint-phone-width) 
+    z-index: -1
+    position: absolute
+    height: 100vh
+    width: 100vw
+    background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ), url('../img/mobileBackground.jpg')
+    display: unset
+    background-size: cover
+    background-repeat: no-repeat
+    
+.aboutBackgroundContainer
+  background-image: url('../img/bioPage.jpg')
+  background-size: cover
+  position: absolute
+  z-index: -1
+  height: 100vh
+  width: 100vw
+  max-width: unset !important 
+  background-position-x: -130px
+  background-repeat: no-repeat
+  @media screen and (max-width: $breakpoint-phone-width) 
+    display: none
+
+.contactBackgroundContainer
+  background-image: url('../img/contact.jpg')
+  background-size: cover
+  position: absolute
+  z-index: -1
+  height: 100vh
+  width: 100vw
+  max-width: unset !important 
+  background-position-x: 25vw
+  @media screen and (max-width: $breakpoint-phone-width) 
+    display: none
+
+
+//burger menu styling
+  /* Position and sizing of burger button */
+.bm-burger-button 
+  position: fixed
+  width: 36px
+  height: 30px
+  right: 36px
+  top: 36px
+  display: none
+  @media screen and (max-width: $breakpoint-tablet-width) 
+    display: unset !important
+   
+
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars 
+  background: white
+  height: 10% !important
+
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button 
+  height: 24px
+  width: 24px
+
+
+/* Color/shape of close button cross */
+.bm-cross 
+  background: #bdc3c7
+
+
+/* General sidebar styles */
+.bm-menu 
+  background: #373a47
+  padding: 2.5em 1.5em 0
+  font-size: 1.15em
+
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape 
+  fill: #373a47
+
+
+/* Wrapper for item list */
+.bm-item-list 
+  display: flex
+  flex-direction: column
+  padding: 0.8em
+  text-align: center
+  a
+    text-decoration: none
+    color: white !important
+
+
+/* Individual item */
+.bm-item 
+  display: inline-block
+  padding-bottom: 3vh
+  flex: 1
+
+
+/* Styling of overlay */
+.bm-overlay 
+  background: rgba(0, 0, 0, 0.3)
+
+.bm-menu-wrap
+  width: 45vw !important
 
 @import "~bulma"

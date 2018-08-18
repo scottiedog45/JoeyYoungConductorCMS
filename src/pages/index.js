@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import NameHeader from '../components/NameHeader'
 import LandingQuote from '../components/LandingQuote'
-import backgroundImage from '../img/landingPage.jpeg'
 
 
 export default class IndexPage extends React.Component {
@@ -11,8 +10,8 @@ export default class IndexPage extends React.Component {
     
 
     return (
-      <section>
-      <img className='landingImage' src={backgroundImage} />
+      <section className='landing-section'>
+      <div className='landingBackgroundContainer'></div>
       <NameHeader />
       <LandingQuote />
       </section>
