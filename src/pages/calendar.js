@@ -19,6 +19,7 @@ export default class IndexPage extends React.Component {
             CALENDAR
             </div>
           </div>
+          <div className='calendar-engagements-container'>
           {posts
             .map(({ node: post }) => (
               <div
@@ -43,6 +44,7 @@ export default class IndexPage extends React.Component {
                 </p>
               </div>
             ))}
+            </div>
         </div>
       </section>
       </div>

@@ -21,8 +21,7 @@ export default class IndexPage extends React.Component {
           {articles
             .map(({ node: article }) => (
               <div
-                className="content"
-                style={{padding: '1em 2em' }}
+                className="content "
                 key={article.id}
               >
                 <p>
