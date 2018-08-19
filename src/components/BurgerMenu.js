@@ -13,6 +13,7 @@ class BurgerMenu extends React.Component {
     return (
       <TinyMenu right>
         <a id='home' className='burger-menu-item' href='/'>Home</a>
+        <a id='about' className='burger-menu-item' href='/bio'>About</a>
         <a id='calendar' className='burger-menu-item' href='/calendar'>Calendar</a>
         <a id='news' className='burger-menu-item' href='/news'>News</a>
         <a id='video' className='burger-menu-item' href='/videos'>Video</a>

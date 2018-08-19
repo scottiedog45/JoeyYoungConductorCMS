@@ -22,7 +22,7 @@ export default class IndexPage extends React.Component {
           {posts
             .map(({ node: post }) => (
               <div
-                className="content"
+                className="content engagement-content"
                 style={{padding: '2em 4em' }}
                 key={post.id}
               >
@@ -30,7 +30,8 @@ export default class IndexPage extends React.Component {
                   <Link className="has-text-primary" to={post.fields.slug}>
                     {post.frontmatter.date}
                   </Link>
-                  <small>{post.frontmatter.dateTime}</small>
+                  <small>{post.frontmatter.dateTime}</small><br />
+                  <small>{post.frontmatter.location}</small>
                 </p>
                 <p>
                   {post.frontmatter.program}
@@ -72,9 +73,10 @@ export const pageQuery = graphql`
           }
           frontmatter {
             eventLink
+            location
             program
             templateKey
-            dateTime(formatString: "MMMM DD, YYYY")
+            dateTime(formatString: "dddd, MMMM DD, YYYY, h:mm a")
           }
         }
       }

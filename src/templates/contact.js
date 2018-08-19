@@ -16,7 +16,9 @@ export const ContactPageTemplate = ({ title, content, contentComponent }) => {
             <div className='styledTitle'>
             CONTACT
             </div>
+            <section className='contact-inner'>
               <PageContent className="content" content={content} />
+              </section>
       </div>
     </section>
     </div>

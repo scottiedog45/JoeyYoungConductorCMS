@@ -26,7 +26,7 @@ export default class IndexPage extends React.Component {
                 key={article.id}
               >
                 <p>
-                  <small>{article.frontmatter.title}</small>
+                  <h3>{article.frontmatter.title}</h3>
                 </p>
                 <p>
                   {article.frontmatter.blurb}
