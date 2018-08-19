@@ -40,7 +40,7 @@ h3
   top: 20px
   
   @media screen and (max-width: $breakpoint-tablet-width) 
-    display: none
+    display: none !important
 
 .socialNav
   font-size: 30px
@@ -50,7 +50,7 @@ h3
   float: right
   clear: right
   @media screen and (max-width: $breakpoint-tablet-width) 
-    display: none
+    display: none !important
   a
     padding-left: 30px
   
@@ -85,7 +85,7 @@ h3
   text-align: right
   float: right
   clear: right
-  margin-top: 80px
+  margin-top: 30vh
   margin-right: 70px
   color: white
   width: 50vw
@@ -138,6 +138,8 @@ section
 
 .news-section
   padding-top: 26vh !important
+  @media screen and (max-width: $breakpoint-tablet-width) 
+    padding-top: 7rem !important
 
 .calendar-section
   color: black !important
@@ -145,6 +147,7 @@ section
   width: 50vw
   float: right
   @media screen and (max-width: $breakpoint-tablet-width) 
+    text-align: center
     width: unset
     color: white !important
     padding-top: 7rem !important
@@ -162,6 +165,7 @@ section
   padding-top: 26vh !important
   @media screen and (max-width: $breakpoint-tablet-width)
     padding-top: 7rem !important
+    text-align: center
 
 .videos-section
   padding-top: 26vh !important
