@@ -7,13 +7,13 @@ const SocialMediaNavbar = () => (
   <nav className="socialNav navbar is-transparent">
     <div className="container">
       <div className="navbar-start">
-        <Link className="navbar-item" to="/twitter">
+        <Link className="navbar-item" to="https://twitter.com/youngconductor?lang=en">
         <FontAwesomeIcon icon={faTwitter} />
         </Link>
-        <Link className="navbar-item" to="/instagram">
+        <Link className="navbar-item" to="https://www.instagram.com/youngconductor/">
         <FontAwesomeIcon icon={faInstagram} />
         </Link>
-        <Link className="navbar-item" to="/facebook">
+        <Link className="navbar-item" to="https://www.facebook.com/YOUNGconductor/">
         <FontAwesomeIcon icon={faFacebook} />
         </Link>
       </div>

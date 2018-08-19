@@ -19,9 +19,9 @@ class BurgerMenu extends React.Component {
         <a id='video' className='burger-menu-item' href='/videos'>Video</a>
         <a id='photos' className='burger-menu-item' href='/pics'>Pics</a>
         <a id='contact' className='burger-menu-item' href='/contact'>Contact</a>
-        <a id='home' className='burger-menu-item' href='/'><FontAwesomeIcon icon={faTwitter} /></a>
-        <a id='home' className='burger-menu-item' href='/'><FontAwesomeIcon icon={faInstagram} /></a>
-        <a id='home' className='burger-menu-item' href='/'><FontAwesomeIcon icon={faFacebook} /></a>
+        <a id='home' className='burger-menu-item bm-social' href='https://twitter.com/youngconductor?lang=en'><FontAwesomeIcon icon={faTwitter} /></a>
+        <a id='home' className='burger-menu-item bm-social' href='https://www.instagram.com/youngconductor/'><FontAwesomeIcon icon={faInstagram} /></a>
+        <a id='home' className='burger-menu-item bm-social' href='https://www.facebook.com/YOUNGconductor/'><FontAwesomeIcon icon={faFacebook} /></a>
       </TinyMenu>
     )
   }
