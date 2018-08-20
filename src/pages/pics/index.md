@@ -1,10 +1,9 @@
 ---
-templateKey: 'pics-page'
-path: /pics
+templateKey: pics-page
 pics:
-  - alt: other thing
-    image: /img/coffee.png
-  - alt: Thing
-    image: /img/screen-shot-2018-08-04-at-10.18.04-pm.png
+  - alt: Chairs
+    image: /img/joseph-young-2-credit-jeff-roffman.jpg
+  - alt: Smile Pic
+    image: /img/jospeh-young-1-credit-jeff-roffman.jpg
 ---
 
