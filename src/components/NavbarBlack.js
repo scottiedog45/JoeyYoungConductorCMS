@@ -3,26 +3,26 @@ import Link from 'gatsby-link'
 
 import logo from '../img/logo.svg'
 
-const Navbar = () => (
+const NavbarBlack = () => (
   <nav style={navBarStyle} className="navbar is-transparent">
     <div className="container">
       <div className="navbar-start">
-        <Link className="navbar-item white" to="/bio">
+        <Link className="navbar-item black" to="/bio">
           About
         </Link>
-        <Link className="navbar-item white" to="/calendar">
+        <Link className="navbar-item black" to="/calendar">
           Calendar
         </Link>
-        <Link className="navbar-item white" to="/news">
+        <Link className="navbar-item black" to="/news">
           News
         </Link>
-        <Link className="navbar-item white" to="/videos">
+        <Link className="navbar-item black" to="/videos">
           Video
         </Link>
-        <Link className="navbar-item white" to="/pics">
+        <Link className="navbar-item black" to="/pics">
           Photos
         </Link>
-        <Link className="navbar-item white" to="/contact">
+        <Link className="navbar-item black" to="/contact">
           Contact
         </Link>
       </div>
@@ -36,4 +36,4 @@ const navBarStyle = {
   top: 20
 }
 
-export default Navbar
+export default NavbarBlack

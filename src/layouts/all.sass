@@ -33,6 +33,12 @@ h3
 .container
   width: unset !important
 
+.black
+  color: black !important
+
+.white
+  color: white !important
+
 .navbar
   background-color: inherit !important
   font-size: 20px
@@ -60,10 +66,18 @@ h3
   clear: right
   width: 60vw
   font-family: $body-font
+  height: 100vh
+  overflow: hidden
   @media screen and (max-width: $breakpoint-tablet-width) 
     float: unset
     clear: unset
     width: unset
+    height: unset 
+    overflow: unset
+
+.bioContent
+  overflow-y: scroll
+  height: 66vh
 
 .pics-page-content
   margin: auto
@@ -98,9 +112,6 @@ h3
   font-size: 20px
   @media screen and (max-width: $breakpoint-tablet-width) 
     display: none
-
-.navbar-item
-  color: white !important
 
 .landingName 
   position: absolute

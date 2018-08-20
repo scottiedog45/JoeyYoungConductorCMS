@@ -16,7 +16,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
             <div className='styledTitle'>
             BIO
             </div>
-              <PageContent className="content" content={content} />
+              <PageContent className="content bioContent" content={content} />
             </div>
       </div>
     </section>
