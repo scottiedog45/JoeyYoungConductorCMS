@@ -14,9 +14,9 @@ const TemplateWrapper = ({ children }) => {
     return (
   <div>
     <Helmet title="Joseph Young" />
-    {self.location.href.includes('calendar') ? <NavbarBlack /> : <Navbar /> }
+    {window.location.href.includes('calendar') ? <NavbarBlack /> : <Navbar /> }
     <BurgerMenu />
-    {self.location.href.includes('calendar') ? <SocialMediaNavbarBlack /> : <SocialMediaNavbar />}
+    {window.location.href.includes('calendar') ? <SocialMediaNavbarBlack /> : <SocialMediaNavbar />}
     <div>{children()}</div>
   </div>
     )
