@@ -22,7 +22,7 @@ const Navbar = () => (
         <Link className="navbar-item white" to="/pics">
           Photos
         </Link>
-        <Link className="navbar-item white" to="/contact">
+        <Link className="navbar-item white contact-navbar" to="/contact">
           Contact
         </Link>
       </div>

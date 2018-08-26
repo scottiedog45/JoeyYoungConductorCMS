@@ -13,7 +13,7 @@ const SocialMediaNavbar = () => (
         <Link className="navbar-item white" to="https://www.instagram.com/youngconductor/">
         <FontAwesomeIcon icon={faInstagram} />
         </Link>
-        <Link className="navbar-item white" to="https://www.facebook.com/YOUNGconductor/">
+        <Link className="navbar-item white facebook-navbar" to="https://www.facebook.com/YOUNGconductor/">
         <FontAwesomeIcon icon={faFacebook} />
         </Link>
       </div>

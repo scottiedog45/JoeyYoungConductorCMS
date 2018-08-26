@@ -44,11 +44,16 @@ h3
   font-size: 20px
   position: fixed !important
   top: 20px
+  margin-right: 70px
   
   @media screen and (max-width: $breakpoint-tablet-width) 
     display: none !important
 
+.contact-navbar 
+  padding-right: 0px !important
+
 .socialNav
+  margin-right: 70px
   font-size: 30px
   top: 80px !important
   position: fixed !important
@@ -92,6 +97,7 @@ h3
      width: unset !important
 
 .engagement-content
+  padding: 0em 4em !important
   @media screen and (max-width: $breakpoint-tablet-width)
     padding: 1em 2em !important
 
@@ -154,7 +160,7 @@ section
 
 .calendar-section
   color: black !important
-  padding-top: 26vh !important
+  padding-top: 24vh !important
   width: 50vw
   float: right
   @media screen and (max-width: $breakpoint-tablet-width) 
@@ -166,6 +172,7 @@ section
 
 .calendar-engagements-container
   overflow: scroll
+  height: 50vh
 
 .contact-inner
   @media screen and (max-width: $breakpoint-tablet-width)
@@ -187,7 +194,14 @@ section
   padding-top: 26vh !important
   @media screen and (max-width: $breakpoint-tablet-width)
     padding-top: 7rem !important
+ 
+.image-grow
+  transition: all .2s ease-in-out
+  &:hover
+    transform: scale(1.05)
 
+.image-container
+  padding: 1rem
 
 .styledTitle
   font-family: $header-font
@@ -302,6 +316,9 @@ section
   @media screen and (max-width: $breakpoint-tablet-width) 
     display: none
 
+.facebook-navbar
+  padding-right: 0px !important
+
 
 //burger menu styling
   /* Position and sizing of burger button */
@@ -374,5 +391,29 @@ section
 
 .bm-social
   font-size: 20px
+
+//scrollbar
+.frame::-webkit-scrollbar 
+  -webkit-appearance: none
+
+
+.frame::-webkit-scrollbar:vertical
+  width: 11px
+
+
+.frame::-webkit-scrollbar:horizontal 
+  height: 11px
+
+
+.frame::-webkit-scrollbar-thumb 
+  border-radius: 8px
+  border: 2px solid white 
+  background-color: rgba(0, 0, 0, .5)
+
+
+.frame::-webkit-scrollbar-track 
+  background-color: #fff
+  border-radius: 8px
+
 
 @import "~bulma"

@@ -5,8 +5,8 @@ import { v4 } from 'uuid'
 const Images = ({ pics }) => (
   <div>
     {pics.map(pic => (
-      <div key={v4()} className="message">
-        <img src={pic.image} className="message-body" alt={pic.alt} />
+      <div className='image-container' key={v4()}>
+        <img className='image-grow' src={pic.image} alt={pic.alt} />
       </div>
     ))}
   </div>

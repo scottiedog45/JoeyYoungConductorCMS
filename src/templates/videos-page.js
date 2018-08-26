@@ -17,6 +17,7 @@ export const VideoPageTemplate = ({
 
 
 const VideoPage = ({ data }) => {
+  console.log(data)
   const { frontmatter } = data.markdownRemark
 
   return (
