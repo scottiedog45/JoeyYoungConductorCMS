@@ -10,7 +10,7 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 
 const TemplateWrapper = ({ children }) => {
-  if (typeof window !== undefined) {
+  if (typeof window !== `undefined`) {
     return (
   <div>
     <Helmet title="Joseph Young" />
