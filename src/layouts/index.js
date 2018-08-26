@@ -12,9 +12,9 @@ import './all.sass'
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet title="Joseph Young" />
-    {window.location.href.includes('calendar') ? <NavbarBlack /> : <Navbar /> }
+    {location.href.includes('calendar') ? <NavbarBlack /> : <Navbar /> }
     <BurgerMenu />
-    {window.location.href.includes('calendar') ? <SocialMediaNavbarBlack /> : <SocialMediaNavbar />}
+    {location.href.includes('calendar') ? <SocialMediaNavbarBlack /> : <SocialMediaNavbar />}
     <div>{children()}</div>
   </div>
 )
