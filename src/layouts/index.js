@@ -9,7 +9,9 @@ import SocialMediaNavbar from '../components/SocialMediaNavbar'
 import Navbar from '../components/Navbar'
 import './all.sass'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children }) => {
+  if (typeof window !== undefined) {
+    return (
   <div>
     <Helmet title="Joseph Young" />
     {self.location.href.includes('calendar') ? <NavbarBlack /> : <Navbar /> }
@@ -17,7 +19,10 @@ const TemplateWrapper = ({ children }) => (
     {self.location.href.includes('calendar') ? <SocialMediaNavbarBlack /> : <SocialMediaNavbar />}
     <div>{children()}</div>
   </div>
-)
+    )
+  }
+  return <div></div>
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
