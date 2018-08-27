@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
-import backgroundImage from '../img/calendarPage.jpg'
+import BackgroundImage from '../components/BackgroundImage'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -11,7 +11,7 @@ export default class IndexPage extends React.Component {
     return (
       <div>
         <div className='mobileBackgroundContainer' />
-        <div className='calendarPicContainer'></div>
+        <BackgroundImage className='calendarBackground' backgroundImage={this.props.data.calendarPageBackground} />
       <section className="section calendar-section">
         <div className="container">
           <div className="content">
@@ -62,6 +62,11 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query CalendarQuery {
+    calendarPageBackground: imageSharp(id: {regex: "/calendarPage/"}) {
+      sizes (maxWidth: 1240) {
+        ...GatsbyImageSharpSizes_withWebp_noBase64
+      }
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "engagement" } }}

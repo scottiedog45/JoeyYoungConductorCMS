@@ -1,14 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
-import backgroundImage from '../img/contact.jpg'
+import BackgroundImage from '../components/BackgroundImage'
 
-export const ContactPageTemplate = ({ title, content, contentComponent }) => {
+export class ContactPageTemplate extends React.Component {
+  
+  render() {
+
+  console.log(this.props)
+
+  const { title, content, contentComponent } = this.props
   const PageContent = contentComponent || Content
 
   return (
     <div>
-      <div className='contactBackgroundContainer'></div>
+      <BackgroundImage className='contactBackground' backgroundImage={this.props.contactPageBackground} />
       <div className='mobileBackgroundContainer'></div>
     <section className="contact-section section section--gradient">
     
@@ -23,6 +29,7 @@ export const ContactPageTemplate = ({ title, content, contentComponent }) => {
     </section>
     </div>
   )
+}
 }
 
 ContactPageTemplate.propTypes = {
@@ -40,6 +47,7 @@ const ContactPage = ({ data }) => {
       title={post.frontmatter.title}
       body={post.frontmatter.body}
       content={post.html}
+      contactPageBackground = {data.contactPageBackground}
     />
   )
 }
@@ -52,6 +60,11 @@ export default ContactPage
 
 export const contactPageQuery = graphql`
   query ContactPage($id: String!) {
+    contactPageBackground: imageSharp(id: {regex: "/contact/"}) {
+      sizes (maxWidth: 1240) {
+        ...GatsbyImageSharpSizes_withWebp_noBase64
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

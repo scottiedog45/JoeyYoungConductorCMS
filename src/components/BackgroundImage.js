@@ -1,11 +1,12 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
-export default class BackgroundImage extends React.Component {
-    render () {
-        return (
-            <div className='picContainer'>
-                
-            </div>
-        )
-    }
-}
+const BackgroundImage = props => (
+    <Img
+        className={props.className}
+        alt='background'
+        sizes={props.backgroundImage.sizes}
+        />
+)
+
+export default BackgroundImage

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import BackgroundImage from '../components/BackgroundImage'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -9,7 +10,7 @@ export default class IndexPage extends React.Component {
     return (
       <div>
         <div className='mobileBackgroundContainer'></div>
-       <div className='newsBackgroundContainer'></div>
+       <BackgroundImage className='newsBackground' backgroundImage = {this.props.data.newsPageBackground} />
       <section className="section news-section">
       
         <div className="container">
@@ -51,6 +52,11 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query NewsQuery {
+    newsPageBackground: imageSharp(id: {regex: "/newsPage/"}) {
+      sizes (maxWidth: 1240) {
+        ...GatsbyImageSharpSizes_withWebp_noBase64
+      }
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "article" } }}

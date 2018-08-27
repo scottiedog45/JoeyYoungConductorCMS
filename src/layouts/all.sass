@@ -52,6 +52,33 @@ h3
 .contact-navbar 
   padding-right: 0px !important
 
+.calendarBackground
+  width: 100% !important
+
+.bioBackground
+  img
+    left: -10vw !important
+
+.contactBackground
+  img
+    top: 10vh !important
+    left: 22vw !important
+
+.gatsby-image-outer-wrapper
+  position: absolute !important
+  z-index: -1 !important
+  img 
+    position: fixed !important
+  @media screen and (max-width: $breakpoint-tablet-width) 
+    display: none !important
+  
+.svgLogo
+  position: fixed !important 
+  margin-top: 4vh !important 
+  margin-left: 2vw !important 
+  @media screen and (max-width: $breakpoint-tablet-width) 
+    display: none !important
+
 .socialNav
   margin-right: 70px
   font-size: 30px
@@ -67,6 +94,8 @@ h3
   
   
 .bioSection
+  padding-top: 10rem !important
+  padding-right: 4rem !important
   float: right
   clear: right
   width: 60vw
@@ -74,6 +103,8 @@ h3
   height: 100vh
   overflow: hidden
   @media screen and (max-width: $breakpoint-tablet-width) 
+    padding-top: 7rem !important
+    padding-right: 1.5rem !important
     float: unset
     clear: unset
     width: unset
@@ -173,6 +204,9 @@ section
 .calendar-engagements-container
   overflow: scroll
   height: 50vh
+  @media screen and (max-width: $breakpoint-tablet-width)
+    height: 65vh
+
 
 .contact-inner
   @media screen and (max-width: $breakpoint-tablet-width)
@@ -263,6 +297,8 @@ section
   //tablet styling
   @media screen and (max-width: $breakpoint-tablet-width) 
     display: none
+
+
 
 .landingBackgroundContainer
   background-image: url('../img/landingPage.jpg')

@@ -1,27 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
+import BackgroundImage from '../components/BackgroundImage'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export class AboutPageTemplate extends React.Component {
+  
+  render() {
+
+  const {title, content, contentComponent} = this.props
+  
   const PageContent = contentComponent || Content
 
   return (
     <div>
-      <div className='aboutBackgroundContainer' />
+      {/* <div className='aboutBackgroundContainer' /> */}
+      <BackgroundImage className='bioBackground' backgroundImage={this.props.bioPageBackground} />
       <div className='mobileBackgroundContainer' />
     <section className="bioSection section section--gradient">
     
       <div className="container">
-            <div className="section">
+          
             <div className='styledTitle'>
             BIO
             </div>
               <PageContent className="content bioContent" content={content} />
-            </div>
+            
       </div>
     </section>
     </div>
   )
+}
 }
 
 AboutPageTemplate.propTypes = {
@@ -38,6 +46,7 @@ const AboutPage = ({ data }) => {
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
       content={post.html}
+      bioPageBackground = {data.bioPageBackground}
     />
   )
 }
@@ -56,5 +65,12 @@ export const aboutPageQuery = graphql`
         title
       }
     }
+    bioPageBackground: imageSharp(id: {regex: "/bioPage/"}) {
+      sizes (maxWidth: 1240) {
+        ...GatsbyImageSharpSizes_withWebp_noBase64
+      }
+    }
   }
 `
+
+
