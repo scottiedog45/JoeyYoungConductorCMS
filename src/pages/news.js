@@ -9,8 +9,9 @@ export default class IndexPage extends React.Component {
 
     return (
       <div>
+        <div className="newsBackgroundContainer" />
         <div className='mobileBackgroundContainer'></div>
-       <BackgroundImage className='newsBackground' backgroundImage = {this.props.data.newsPageBackground} />
+       {/* <BackgroundImage className='newsBackground' backgroundImage = {this.props.data.newsPageBackground} /> */}
       <section className="section news-section">
       
         <div className="container">

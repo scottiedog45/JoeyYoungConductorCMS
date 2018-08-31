@@ -14,7 +14,8 @@ export class ContactPageTemplate extends React.Component {
 
   return (
     <div>
-      <BackgroundImage className='contactBackground' backgroundImage={this.props.contactPageBackground} />
+      <div className="contactBackgroundContainer" />
+      {/* <BackgroundImage className='contactBackground' backgroundImage={this.props.contactPageBackground} /> */}
       <div className='mobileBackgroundContainer'></div>
     <section className="contact-section section section--gradient">
     

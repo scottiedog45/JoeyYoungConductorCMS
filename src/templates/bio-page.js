@@ -13,8 +13,8 @@ export class AboutPageTemplate extends React.Component {
 
   return (
     <div>
-      {/* <div className='aboutBackgroundContainer' /> */}
-      <BackgroundImage className='bioBackground' backgroundImage={this.props.bioPageBackground} />
+      <div className='aboutBackgroundContainer' />
+      {/* <BackgroundImage className='bioBackground' backgroundImage={this.props.bioPageBackground} /> */}
       <div className='mobileBackgroundContainer' />
     <section className="bioSection section section--gradient">
     
