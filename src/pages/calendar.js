@@ -63,7 +63,7 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
   query CalendarQuery {
     calendarPageBackground: imageSharp(id: {regex: "/calendarPage/"}) {
-      sizes (maxWidth: 1240) {
+      sizes (maxWidth: 1240, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }

@@ -30,6 +30,9 @@ body
 h3 
   color: white !important
 
+img
+  content: ""
+  
 .container
   width: unset !important
 
@@ -54,15 +57,19 @@ h3
 
 .calendarBackground
   width: 100% !important
+  img
+    min-height: 700px !important
 
 .bioBackground
   img
-    left: -10vw !important
+    top: 50px !important
+    height: unset !important
 
 .contactBackground
   img
-    top: 10vh !important
-    left: 22vw !important
+    transform: scale(1.2)
+    left: -80px !important
+    top: 63px !important
 
 .gatsby-image-outer-wrapper
   position: absolute !important
@@ -71,6 +78,10 @@ h3
     position: fixed !important
   @media screen and (max-width: $breakpoint-tablet-width) 
     display: none !important
+  
+.gatsby-image-wrapper
+  div
+    padding: none !important
   
 .svgLogo
   position: fixed !important 
@@ -98,7 +109,7 @@ h3
   padding-right: 4rem !important
   float: right
   clear: right
-  width: 60vw
+  width: 50vw
   font-family: $body-font
   height: 100vh
   overflow: hidden
@@ -215,6 +226,7 @@ section
 
 .contact-section
   padding-top: 26vh !important
+  text-align: right
   @media screen and (max-width: $breakpoint-tablet-width)
     padding-top: 7rem !important
     text-align: center

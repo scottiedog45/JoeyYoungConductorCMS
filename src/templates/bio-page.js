@@ -66,7 +66,7 @@ export const aboutPageQuery = graphql`
       }
     }
     bioPageBackground: imageSharp(id: {regex: "/bioPage/"}) {
-      sizes (maxWidth: 1240) {
+      sizes (maxWidth: 1240, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }

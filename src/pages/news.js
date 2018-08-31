@@ -53,7 +53,7 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
   query NewsQuery {
     newsPageBackground: imageSharp(id: {regex: "/newsPage/"}) {
-      sizes (maxWidth: 1240) {
+      sizes (maxWidth: 1240, quality: 100) {
         ...GatsbyImageSharpSizes_withWebp_noBase64
       }
     }
