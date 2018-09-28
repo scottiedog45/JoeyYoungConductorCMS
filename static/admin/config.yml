@@ -6,37 +6,58 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
 
-
-  - name: "engagements"
+  - name: "calendar"
     label: "Upcoming Engagements"
-    folder: "src/pages/engagements"
+    folder: "src/pages/calendar"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}-{{time}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "engagements-page"}
-      - {label: "Engagements", name: engagements, widget: "list", fields: [{label: "Date", name: "date", widget: "date"},{label: "Location", name: "location", widget: "string"},{label: "Program", name: "program", widget: "markdown"}]}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "engagement"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "dateTime", widget: "datetime"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Link to Event", name: "eventLink", widget: "string"}
+      - {label: "Program", name: "program", widget: "markdown"}
 
-
+  - name: "news"
+    label: "News"
+    folder: "src/pages/news"
+    create: true
+    fields: 
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "article"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Blurb", name: "blurb", widget: "string"}
+      - {label: "Link", name: "link", widget: "string"}
 
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+      - file: "src/pages/videos/index.md"
+        label: "Videos"
+        name: "videos"
+        create: true
+        fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "videos-page"}
+        - {label: "Videos", name: "videos", widget: "list", fields: [{label: "Video Url", name: "videoUrl", widget: "string"}, {label: "Text Description", name: "textDescription", widget: "string"}]}
+      - file: "src/pages/pics/index.md"
+        label: "Pics"
+        name: "pics"
+        create: true
+        fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "pics-page"}
+        - {label: "Pics", name: "pics", widget: "list", fields: [{label: "Image", name: "image", widget: "image"}, {label: "Text Description", name: "alt", widget: "string"}]}
+      - file: "src/pages/contact/index.md"
+        label: "Contact"
+        name: "contact"
+        create: true
+        fields: 
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/bio/index.md"
+        label: "Bio"
+        name: "bio"
+        create: true
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
@@ -44,6 +65,7 @@ collections:
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
+        create: true
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
           - {label: Title, name: title, widget: string}
