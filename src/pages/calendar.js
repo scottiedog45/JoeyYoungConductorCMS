@@ -12,6 +12,7 @@ export default class IndexPage extends React.Component {
       <div>
         <div className="mobileBackgroundContainer" />
         <div className="calendarBackgroundContainer" />
+        {/* <BackgroundImage className='calendarBackground' backgroundImage={this.props.data.calendarPageBackground} /> */}
         <section className="section calendar-section">
           <div className="container">
             <div className="content">
@@ -71,7 +72,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          frontmatter(filter: { draft: { eq: "false" } }) {
+          frontmatter {
             eventLink
             location
             program
