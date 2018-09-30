@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from "react";
+import Link from "gatsby-link";
 
-import logo from '../img/logo.svg'
+import logo from "../img/logo.svg";
 
 const Navbar = () => (
   <nav style={navBarStyle} className="navbar is-transparent">
@@ -28,12 +28,12 @@ const Navbar = () => (
       </div>
     </div>
   </nav>
-)
+);
 
 const navBarStyle = {
   right: 0,
-  float: 'right',
+  float: "right",
   top: 20
-}
+};
 
-export default Navbar
+export default Navbar;

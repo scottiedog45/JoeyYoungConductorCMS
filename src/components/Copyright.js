@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-export default Copyright = () => {
-    <div>
-     <p>{'All Content \u00A9 Joseph Young'}</p> 
-    </div>
-}
+export default (Copyright = () => {
+  <div>
+    <p>{"All Content \u00A9 Joseph Young"}</p>
+  </div>;
+});

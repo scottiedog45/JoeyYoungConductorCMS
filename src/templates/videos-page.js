@@ -1,41 +1,32 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Videos from '../components/Videos'
+import React from "react";
+import PropTypes from "prop-types";
+import Videos from "../components/Videos";
 
-export const VideoPageTemplate = ({
-  videos,
-}) => (
+export const VideoPageTemplate = ({ videos }) => (
   <section className="videos-section section section--gradient">
-  <div className='content video-content'>
-  <div className='styledTitle'>
-            VIDEO
-            </div>
-              <Videos videos={videos} />
-              </div>
+    <div className="content video-content">
+      <div className="styledTitle">VIDEO</div>
+      <Videos videos={videos} />
+    </div>
   </section>
-)
-
+);
 
 const VideoPage = ({ data }) => {
-  console.log(data)
-  const { frontmatter } = data.markdownRemark
+  console.log(data);
+  const { frontmatter } = data.markdownRemark;
 
-  return (
-    <VideoPageTemplate
-      videos={frontmatter.videos}
-    />
-  )
-}
+  return <VideoPageTemplate videos={frontmatter.videos} />;
+};
 
 VideoPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
+      frontmatter: PropTypes.object
+    })
+  })
+};
 
-export default VideoPage
+export default VideoPage;
 
 export const videoPageQuery = graphql`
   query VideoPage($id: String!) {
@@ -49,4 +40,4 @@ export const videoPageQuery = graphql`
       }
     }
   }
-`
+`;

@@ -1,16 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { v4 } from 'uuid'
+import React from "react";
+import PropTypes from "prop-types";
+import { v4 } from "uuid";
 
 const Images = ({ pics }) => (
   <div>
     {pics.map(pic => (
-      <div className='image-container' key={v4()}>
-        <img className='image-grow' src={pic.image} alt={pic.alt} />
+      <div className="image-container" key={v4()}>
+        <img className="image-grow" src={pic.image} alt={pic.alt} />
       </div>
     ))}
   </div>
-)
+);
 
 // Testimonials.propTypes = {
 //   testimonials: PropTypes.arrayOf(
@@ -21,4 +21,4 @@ const Images = ({ pics }) => (
 //   ),
 // }
 
-export default Images
+export default Images;

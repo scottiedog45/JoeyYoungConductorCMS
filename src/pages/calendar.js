@@ -77,7 +77,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          frontmatter(filter: { draft: false }) {
+          frontmatter {
             eventLink
             location
             program
