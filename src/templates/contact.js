@@ -13,7 +13,6 @@ export class ContactPageTemplate extends React.Component {
     return (
       <div>
         <div className="contactBackgroundContainer" />
-        {/* <BackgroundImage className='contactBackground' backgroundImage={this.props.contactPageBackground} /> */}
         <div className="mobileBackgroundContainer" />
         <section className="contact-section section section--gradient">
           <form name="contact" method="POST" netlify>
@@ -72,7 +71,6 @@ const ContactPage = ({ data }) => {
       title={post.frontmatter.title}
       body={post.frontmatter.body}
       content={post.html}
-      contactPageBackground={data.contactPageBackground}
     />
   );
 };

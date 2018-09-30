@@ -63,7 +63,7 @@ export const pageQuery = graphql`
   query CalendarQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "engagement" } } }
+      filter: { frontmatter: { templateKey: { eq: "engagement" } }, {draft: {ne: false}} }
     ) {
       edges {
         node {
