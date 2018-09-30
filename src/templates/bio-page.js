@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
-import BackgroundImage from "../components/BackgroundImage";
 
 export class AboutPageTemplate extends React.Component {
   render() {
@@ -12,7 +11,6 @@ export class AboutPageTemplate extends React.Component {
     return (
       <div>
         <div className="aboutBackgroundContainer" />
-        {/* <BackgroundImage className='bioBackground' backgroundImage={this.props.bioPageBackground} /> */}
         <div className="mobileBackgroundContainer" />
         <section className="bioSection section section--gradient">
           <div className="container">
@@ -39,7 +37,6 @@ const AboutPage = ({ data }) => {
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
       content={post.html}
-      bioPageBackground={data.bioPageBackground}
     />
   );
 };

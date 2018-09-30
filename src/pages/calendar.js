@@ -11,7 +11,6 @@ export default class IndexPage extends React.Component {
       <div>
         <div className="mobileBackgroundContainer" />
         <div className="calendarBackgroundContainer" />
-        {/* <BackgroundImage className='calendarBackground' backgroundImage={this.props.data.calendarPageBackground} /> */}
         <section className="section calendar-section">
           <div className="container">
             <div className="content">
