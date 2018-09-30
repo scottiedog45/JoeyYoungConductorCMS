@@ -58,10 +58,5 @@ export const aboutPageQuery = graphql`
         title
       }
     }
-    bioPageBackground: imageSharp(id: { regex: "/bioPage/" }) {
-      sizes(maxWidth: 1240, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
-      }
-    }
   }
 `;

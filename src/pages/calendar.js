@@ -61,11 +61,6 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query CalendarQuery {
-    calendarPageBackground: imageSharp(id: { regex: "/calendarPage/" }) {
-      sizes(maxWidth: 1240, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
-      }
-    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "engagement" } } }

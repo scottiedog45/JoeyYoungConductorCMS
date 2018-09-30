@@ -85,11 +85,6 @@ export default ContactPage;
 
 export const contactPageQuery = graphql`
   query ContactPage($id: String!) {
-    contactPageBackground: imageSharp(id: { regex: "/contact/" }) {
-      sizes(maxWidth: 1240, quality: 100) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
-      }
-    }
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
