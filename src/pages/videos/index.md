@@ -1,5 +1,6 @@
 ---
 templateKey: videos-page
+path: /videos
 videos:
   - textDescription: testvideo
     videoUrl: o1llmsnK6To
