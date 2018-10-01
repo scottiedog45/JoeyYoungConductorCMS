@@ -11,7 +11,6 @@ export class AboutPageTemplate extends React.Component {
     return (
       <div>
         <div className="aboutBackgroundContainer" />
-        <div className="mobileBackgroundContainer" />
         <section className="bioSection section section--gradient">
           <div className="container">
             <div className="styledTitle">BIO</div>

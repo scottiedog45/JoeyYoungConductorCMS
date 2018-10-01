@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
-import BackgroundImage from "../components/BackgroundImage";
 
 export class ContactPageTemplate extends React.Component {
   render() {
@@ -13,40 +12,30 @@ export class ContactPageTemplate extends React.Component {
     return (
       <div>
         <div className="contactBackgroundContainer" />
-        <div className="mobileBackgroundContainer" />
         <section className="contact-section section section--gradient">
-          <form name="contact" method="POST" netlify>
-            <p>
-              <label>
-                Your Name: <input type="text" name="name" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Email: <input type="email" name="email" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Role:{" "}
-                <select name="role[]" multiple>
-                  <option value="leader">Leader</option>
-                  <option value="follower">Follower</option>
-                </select>
-              </label>
-            </p>
-            <p>
-              <label>
-                Message: <textarea name="message" />
-              </label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
           <div className="container">
             <div className="styledTitle">CONTACT</div>
             <section className="contact-inner">
+              <form name="contact" method="POST" netlify>
+                <p>
+                  <label>
+                    Your Name: <input type="text" name="name" />
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    Your Email: <input type="email" name="email" />
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    Message: <textarea name="message" />
+                  </label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
               <PageContent className="content" content={content} />
             </section>
           </div>

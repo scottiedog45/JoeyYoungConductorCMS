@@ -53,9 +53,8 @@ img
 
 .navbar
   background-color: inherit !important
-  position: fixed !important
   top: 20px
-  margin-right: 70px
+  float: right
   
   @media screen and (max-width: $breakpoint-tablet-width) 
     display: none !important
@@ -91,10 +90,14 @@ img
   div
     padding: none !important
   
-.svgLogo
+.logo
+  top: 20px
   position: fixed !important 
-  margin-top: 4vh !important 
   margin-left: 2vw !important 
+  color: white !important
+  font-family: $header-font
+  letter-spacing: 2px
+  font-size: 20px
   @media screen and (max-width: $breakpoint-tablet-width) 
     display: none !important
 
@@ -113,6 +116,7 @@ img
   
   
 .bioSection
+  color: black
   padding-top: 10rem !important
   padding-right: 4rem !important
   float: right
@@ -200,6 +204,7 @@ nav
   font-size: 14px
   letter-spacing: 4px
   
+  
 
 section 
   clear: right
@@ -213,7 +218,7 @@ section
     padding-top: 7rem !important
 
 .calendar-section
-  color: black !important
+  color: white !important
   padding-top: 24vh !important
   width: 50vw
   float: right
@@ -299,7 +304,7 @@ section
   margin-top: 0 !important
 
 .calendarBackgroundContainer 
-  background-image: url('../img/calendarPage.jpg')
+  background-image: url('../img/calendar.jpg')
   background-size: cover
   position: fixed
   z-index: -1
@@ -337,34 +342,21 @@ section
     background-position-x: 47%
     background-size: cover
     background-repeat: unset
-
-.mobileBackgroundContainer
-  display: none
-  @media screen and (max-width: $breakpoint-tablet-width) 
-    z-index: -1
-    position: fixed
-    height: 100vh
-    width: 100vw
-    background: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ), url('../img/mobileBackground.jpg')
-    display: unset
-    background-size: cover
-    background-repeat: no-repeat
     
 .aboutBackgroundContainer
-  background-image: url('../img/bioPage.jpg')
+  background-image: url('../img/bio.jpg')
   background-size: cover
   position: fixed
   z-index: -1
   height: 100vh
   width: 100vw
   max-width: unset !important 
-  // background-position-x: -130px
   background-repeat: no-repeat
   @media screen and (max-width: $breakpoint-tablet-width) 
     display: none
 
 .contactBackgroundContainer
-  background-image: url('../img/contact.jpg')
+  background-image: url('../img/contactPage.jpg')
   background-size: cover
   position: fixed
   z-index: -1
