@@ -9,7 +9,6 @@ export default class IndexPage extends React.Component {
 
     return (
       <div>
-        <div className="mobileBackgroundContainer" />
         <div className="calendarBackgroundContainer" />
         <section className="section calendar-section">
           <div className="container">
