@@ -11,36 +11,35 @@ export default class IndexPage extends React.Component {
       <div>
         <div className="calendarBackgroundContainer" />
         <section className="section calendar-section">
-          <div className="container">
-            <div className="content">
-              <div className="styledTitle">CALENDAR</div>
-            </div>
-            <div className="calendar-engagements-container">
-              {posts.map(({ node: post }) => (
-                <div
-                  className="content engagement-content"
-                  style={{ padding: "2em 4em" }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.date}
-                    </Link>
-                    <small>{post.frontmatter.dateTime}</small>
-                    <br />
-                    <small>{post.frontmatter.location}</small>
-                  </p>
-                  <p>
-                    {post.frontmatter.program}
-                    <br />
-                    <br />
-                    <Link to={post.frontmatter.eventLink}>
-                      more information...
-                    </Link>
-                  </p>
-                </div>
-              ))}
-            </div>
+          <div className="content">
+            <div className="styledTitle">CALENDAR</div>
+          </div>
+          <div className="calendar-engagements-container">
+            {posts.map(({ node: post }) => (
+              <div
+                className="content engagement-content"
+                style={{ padding: "2em 4em" }}
+                key={post.id}
+              >
+                <p>
+                  <Link className="has-text-primary" to={post.fields.slug}>
+                    {post.frontmatter.date}
+                  </Link>
+                  <p>{post.frontmatter.location}</p>
+                  <small>{post.frontmatter.dateTime}</small>
+                  <br />
+                  <small>{post.frontmatter.location}</small>
+                </p>
+                <p>
+                  {post.frontmatter.program}
+                  <br />
+                  <br />
+                  <Link to={post.frontmatter.eventLink}>
+                    more information...
+                  </Link>
+                </p>
+              </div>
+            ))}
           </div>
         </section>
       </div>
@@ -70,6 +69,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            title
             eventLink
             location
             program

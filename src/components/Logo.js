@@ -6,7 +6,7 @@ export default class Logo extends React.Component {
     return (
       <Link to="/">
         <div className="logo">
-          <p>JOSEPH YOUNG</p>
+          <p style={{ color: this.props.color }}>JOSEPH YOUNG</p>
         </div>
       </Link>
     );

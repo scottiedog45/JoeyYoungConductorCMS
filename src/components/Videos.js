@@ -15,7 +15,7 @@ const Videos = ({ videos }) => (
 
 const opts = {
   height: "500",
-  width: "100%"
+  width: "80%"
 };
 
 // Testimonials.propTypes = {

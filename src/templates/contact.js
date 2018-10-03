@@ -13,32 +13,30 @@ export class ContactPageTemplate extends React.Component {
       <div>
         <div className="contactBackgroundContainer" />
         <section className="contact-section section section--gradient">
-          <div className="container">
-            <div className="styledTitle">CONTACT</div>
-            <section className="contact-inner">
-              <form name="contact" method="POST" netlify>
-                <p>
-                  <label>
-                    Your Name: <input type="text" name="name" />
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    Your Email: <input type="email" name="email" />
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    Message: <textarea name="message" />
-                  </label>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form>
-              <PageContent className="content" content={content} />
-            </section>
-          </div>
+          <div className="styledTitle">CONTACT</div>
+          <section className="contact-inner">
+            <form className="netlifyForm" name="contact" method="POST" netlify>
+              <p>
+                <label>
+                  Your Name: <input type="text" name="name" />
+                </label>
+              </p>
+              <p>
+                <label>
+                  Your Email: <input type="email" name="email" />
+                </label>
+              </p>
+              <p>
+                <label>
+                  Message: <textarea name="message" />
+                </label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
+            </form>
+            <PageContent className="content" content={content} />
+          </section>
         </section>
       </div>
     );

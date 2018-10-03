@@ -5,6 +5,7 @@ import Content, { HTMLContent } from "../components/Content";
 export const EngagementTemplate = ({
   content,
   contentComponent,
+  orchestra,
   date,
   location,
   program,
@@ -17,6 +18,7 @@ export const EngagementTemplate = ({
       {helmet || ""}
       <div className="container content">
         <div>{date}</div>
+        <div>{orchestra}</div>
         <EngagementContent content={content} />
         <div>{location}</div>
         <div>{program}</div>
@@ -35,7 +37,7 @@ const Engagement = ({ data }) => {
       location={post.frontmatter.location}
       date={post.frontmatter.date}
       program={post.frontmatter.program}
-      title={post.frontmatter.title}
+      orchestra={post.frontmatter.orchestra}
       helmet={<Helmet title={`${post.frontmatter.date} | Concert`} />}
     />
   );

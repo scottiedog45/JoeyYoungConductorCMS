@@ -71,8 +71,9 @@ collections:
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "engagement"}
-      - {label: "Draft", name: "draft", widget: "boolean", required: false}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Draft", name: "draft", widget: "boolean", required: false}
+      - {label: "Orchestra", name: "orchestra", widget: "string"}
       - {label: "Date", name: "dateTime", widget: "datetime"}
       - {label: "Location", name: "location", widget: "string"}
       - {label: "Link to Event", name: "eventLink", widget: "string"}

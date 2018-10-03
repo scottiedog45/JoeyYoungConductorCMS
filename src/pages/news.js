@@ -10,23 +10,21 @@ export default class IndexPage extends React.Component {
       <div>
         <div className="newsBackgroundContainer" />
         <section className="section news-section">
-          <div className="container">
-            <div className="content">
-              <div className="styledTitle">NEWS</div>
-            </div>
-            {articles.map(({ node: article }) => (
-              <div className="content " key={article.id}>
-                <p>
-                  <h3>{article.frontmatter.title}</h3>
-                </p>
-                <p>
-                  {article.frontmatter.blurb}
-                  <br />
-                  <br />
-                </p>
-              </div>
-            ))}
+          <div className="content">
+            <div className="styledTitle">NEWS</div>
           </div>
+          {articles.map(({ node: article }) => (
+            <div className="content " key={article.id}>
+              <p>
+                <h3>{article.frontmatter.title}</h3>
+              </p>
+              <p>
+                {article.frontmatter.blurb}
+                <br />
+                <br />
+              </p>
+            </div>
+          ))}
         </section>
       </div>
     );
