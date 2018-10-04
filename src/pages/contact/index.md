@@ -1,6 +1,5 @@
 ---
 templateKey: contact
 title: bioasdfasdf
-body: otherSutff
 ---
-Contact us with this tstuff
+Joseph is currently on faculty at Peabody Conservatory in Baltimore, Maryland.
