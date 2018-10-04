@@ -6,7 +6,7 @@ export class ContactPageTemplate extends React.Component {
   render() {
     console.log(this.props);
 
-    const { title, content, contentComponent } = this.props;
+    const { title, content, body, contentComponent } = this.props;
     const PageContent = contentComponent || Content;
 
     return (
@@ -36,6 +36,7 @@ export class ContactPageTemplate extends React.Component {
               </p>
             </form>
             <PageContent className="content" content={content} />
+            <p>{body}</p>
           </section>
         </section>
       </div>
