@@ -31,7 +31,7 @@ collections:
         fields: 
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "string"}
       - file: "src/pages/bio/index.md"
         label: "Bio"
         name: "bio"
