@@ -7,26 +7,11 @@ const Videos = ({ videos }) => (
   <div className="videoListContainer">
     {videos.map(video => (
       <div key={v4()} className="video-container">
-        <iframe
-          width="560"
-          height="315"
-          position="absolute"
-          scrolling="yes"
-          src="https://www.youtube.com/embed/m7Bc3pLyij0"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-        />
-        {/* <YouTube videoId={video.videoUrl} opts={opts} /> */}
+        <p>{video.textDescription}</p>
       </div>
     ))}
   </div>
 );
-
-const opts = {
-  height: "auto",
-  width: "95vh"
-};
 
 // Testimonials.propTypes = {
 //   testimonials: PropTypes.arrayOf(

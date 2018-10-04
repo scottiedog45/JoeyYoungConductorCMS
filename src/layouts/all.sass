@@ -365,13 +365,62 @@ nav
     text-align: center
 
 
+.image-flex
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-around
+
 .videoListContainer
   height: auto
+  
 .video-container
+
+.vidPageContentFlex
+  display: flex
+  flex-direction: row
+  @media screen and (max-width: $breakpoint-tablet-width)
+    flex-direction: column
+
+.vidList
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  flex: 1
+  margin-right: 10%
+  font-family: $body-font !important
+  font-size: 1rem
+  @media screen and (max-width: $breakpoint-tablet-width)
+    order: 2
+    margin-top: 20px
+
+.vidListItem
+  cursor: pointer
+  &:hover
+    text-decoration: underline
+
+    
+.vidListItem:not(:first-child)
+  margin-top: 20% !important
+
+
+.videoIframe
+  @media screen and (max-width: $breakpoint-tablet-width)
+    order: 1
+    width: 100% !important
+    height: auto !important
+
+.vidComposer
+  font-size: .8rem
+  text-indent: 1rem
+  text-decoration: none !important
+  @media screen and (max-width: $breakpoint-tablet-width)
+    text-indent: 0 !important
 
 
 .videos-section
-  margin-top: 26vh !important
+  margin-top: 22vh !important
+  padding-top: unset !important
   background-color: rgba(255, 255, 255, 0.42)
   @media screen and (max-width: $breakpoint-tablet-width)
     padding-top: 7rem !important
@@ -408,18 +457,10 @@ nav
     margin-top: 0
 
 // Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 5em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
+.image-container
+  max-width: 40vw
+  min-width: 300px
+ 
 
 .margin-top-0
   margin-top: 0 !important

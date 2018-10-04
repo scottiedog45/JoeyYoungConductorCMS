@@ -8,14 +8,68 @@ import Videos from "../components/Videos";
 //     video = e.target.href
 // }
 
-export const VideoPageTemplate = ({ videos }) => (
-  <section className="videos-section section section--gradient">
-    <div className="content video-content">
-      <div className="styledTitle">VIDEO</div>
-      <Videos videos={videos} />
-    </div>
-  </section>
-);
+class VideoPageTemplate extends React.Component {
+  state = {
+    vids: this.props.videos,
+    src: "https://www.youtube.com/embed/FYw1wcGKV28"
+  };
+
+  changeVid(e) {
+    console.log(e.target.getAttribute("data"));
+    console.log(this.state);
+    this.setState({
+      src: e.target.getAttribute("data")
+    });
+  }
+
+  render() {
+    let somevids = this.state.vids.map(vid => (
+      <div className="vidListItem">
+        <p data={vid.videoUrl} onClick={e => this.changeVid(e)}>
+          {vid.textDescription}
+        </p>
+        <p className="vidComposer">{vid.composer}</p>
+      </div>
+    ));
+
+    console.log(this.props);
+
+    return (
+      <section className="videos-section section section--gradient">
+        <div className="content video-content">
+          <div className="styledTitle">VIDEO</div>
+          <div className="vidPageContentFlex">
+            <div className="vidList">{somevids}</div>
+            <iframe
+              className="videoIframe"
+              width="800"
+              height="480"
+              scrolling="yes"
+              src={this.state.src}
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            />
+          </div>
+        </div>
+      </section>
+    );
+  }
+}
+
+// export const VideoPageTemplate = ({ videos }) => (
+
+//       <iframe
+//         width="560"
+//         height="315"
+//         scrolling="yes"
+//         src="https://www.youtube.com/embed/m7Bc3pLyij0"
+//         frameborder="0"
+//         allow="autoplay; encrypted-media"
+//         allowfullscreen
+//       />
+
+// );
 
 const VideoPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
@@ -41,6 +95,7 @@ export const videoPageQuery = graphql`
         videos {
           videoUrl
           textDescription
+          composer
         }
       }
     }
