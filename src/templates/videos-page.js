@@ -2,6 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import Videos from "../components/Videos";
 
+//make this a react component and
+//const changeVid = (e) => {
+//   this.setState({
+//     video = e.target.href
+// }
+
 export const VideoPageTemplate = ({ videos }) => (
   <section className="videos-section section section--gradient">
     <div className="content video-content">
@@ -12,7 +18,6 @@ export const VideoPageTemplate = ({ videos }) => (
 );
 
 const VideoPage = ({ data }) => {
-  console.log(data);
   const { frontmatter } = data.markdownRemark;
 
   return <VideoPageTemplate videos={frontmatter.videos} />;

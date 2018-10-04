@@ -16,28 +16,14 @@ export default class IndexPage extends React.Component {
           </div>
           <div className="calendar-engagements-container">
             {posts.map(({ node: post }) => (
-              <div
-                className="content engagement-content"
-                style={{ padding: "2em 4em" }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.date}
-                  </Link>
-                  <p>{post.frontmatter.location}</p>
-                  <small>{post.frontmatter.dateTime}</small>
-                  <br />
-                  <small>{post.frontmatter.location}</small>
-                </p>
-                <p>
-                  {post.frontmatter.program}
-                  <br />
-                  <br />
-                  <Link to={post.frontmatter.eventLink}>
-                    more information...
-                  </Link>
-                </p>
+              <div className="content engagement-content" key={post.id}>
+                <p className="orchestra">{post.frontmatter.orchestra}</p>
+                <p className="dateTime">{post.frontmatter.dateTime}</p>
+                <p className="location">{post.frontmatter.location}</p>
+                <p className="program">{post.frontmatter.program}</p>
+                <Link className="eventLink" to={post.frontmatter.eventLink}>
+                  event link
+                </Link>
               </div>
             ))}
           </div>
@@ -71,6 +57,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             eventLink
+            orchestra
             location
             program
             templateKey

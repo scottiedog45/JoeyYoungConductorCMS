@@ -7,7 +7,8 @@ export const ArticleTemplate = ({
   contentComponent,
   title,
   blurb,
-  helmet
+  helmet,
+  link
 }) => {
   const ArticleContent = contentComponent || Content;
 
@@ -15,7 +16,7 @@ export const ArticleTemplate = ({
     <section className="section">
       {helmet || ""}
       <div className="container content">
-        <div>{title}</div>
+        <a href={link}>{title}</a>
         <ArticleContent content={content} />
         <div>{blurb}</div>
       </div>
@@ -32,6 +33,7 @@ const Article = ({ data }) => {
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
       blurb={post.frontmatter.blurb}
+      link={post.frontmatter.link}
       helmet={<Helmet title={`${post.frontmatter.date} | Article`} />}
     />
   );
@@ -47,6 +49,7 @@ export const pageQuery = graphql`
       frontmatter {
         blurb
         title
+        link
       }
     }
   }

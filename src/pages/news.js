@@ -16,13 +16,11 @@ export default class IndexPage extends React.Component {
           {articles.map(({ node: article }) => (
             <div className="content " key={article.id}>
               <p>
-                <h3>{article.frontmatter.title}</h3>
+                <a className="newsTitleLink" href={article.frontmatter.link}>
+                  {article.frontmatter.title}
+                </a>
               </p>
-              <p>
-                {article.frontmatter.blurb}
-                <br />
-                <br />
-              </p>
+              <p>{article.frontmatter.blurb}</p>
             </div>
           ))}
         </section>
@@ -55,6 +53,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             blurb
+            link
             templateKey
           }
         }

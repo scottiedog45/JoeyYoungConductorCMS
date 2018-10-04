@@ -15,7 +15,13 @@ const TemplateWrapper = ({ children }) => {
       <div>
         <Helmet title="Joseph Young" />
         <Logo
-          color={window.location.href.includes("bio") ? "black" : "white"}
+          color={
+            window.location.href.includes("bio")
+              ? window.innerWidth > 1024
+                ? "black"
+                : "white"
+              : "white"
+          }
         />
         {window.location.href.includes("bio") ? <NavbarBlack /> : <Navbar />}
         <BurgerMenu />

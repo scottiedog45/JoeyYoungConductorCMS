@@ -155,8 +155,17 @@ a
     padding-top: 7rem !important
 
 .bioContent
-  overflow-y: scroll
   height: 66vh
+
+
+
+
+
+.content p:not(:last-child), .content dl:not(:last-child), .content ol:not(:last-child), .content ul:not(:last-child), .content blockquote:not(:last-child), .content pre:not(:last-child), .content table:not(:last-child) 
+    margin-bottom: unset !important
+
+.eventLink
+  text-decoration: underline
 
 .pics-page-content
   margin: auto
@@ -284,9 +293,24 @@ nav
     bottom: unset
     position: unset
 
+.newsTitleLink
+  text-decoration: underline
+  font-size: 1.2rem
+
 .calendar-engagements-container
   @media screen and (max-width: $breakpoint-tablet-width)
     height: 65vh
+.orchestra
+  font-weight: bold
+  font-size: 1.2rem
+.location
+
+.eventLink
+  font-size: .8rem
+  letter-spacing: 1px
+.dateTime
+
+.program
 
 .contact-section
   font-family: $body-font
@@ -339,6 +363,12 @@ nav
   @media screen and (max-width: $breakpoint-tablet-width)
     padding-top: 7rem !important
     text-align: center
+
+
+.videoListContainer
+  height: auto
+.video-container
+
 
 .videos-section
   margin-top: 26vh !important
