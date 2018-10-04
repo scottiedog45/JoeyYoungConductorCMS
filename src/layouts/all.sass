@@ -460,6 +460,8 @@ nav
 .image-container
   max-width: 40vw
   min-width: 300px
+  @media screen and (max-width: $breakpoint-tablet-width) 
+    max-width: unset !important
  
 
 .margin-top-0
@@ -507,6 +509,9 @@ nav
     background-position-x: 47%
     background-size: cover
     background-repeat: unset
+    bottom: 0 !important
+    top: unset !important
+    height: 96vh
     
 .aboutBackgroundContainer
   background-image: url('../img/bio.jpg')
