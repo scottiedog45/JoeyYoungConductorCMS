@@ -1,6 +1,5 @@
 ---
 templateKey: contact
 title: bioasdfasdf
-body: Joseph is currently on faculty at Peabody Conservatory in Baltimore, Maryland.
 ---
-
+This is a contact subtitle. 
