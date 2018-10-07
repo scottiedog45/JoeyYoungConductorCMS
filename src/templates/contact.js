@@ -35,8 +35,7 @@ export class ContactPageTemplate extends React.Component {
                 <button type="submit">Send</button>
               </p>
             </form>
-            <PageContent className="content" content={content} />
-            <p>{body}</p>
+            <p>{this.props.body}</p>
           </section>
         </section>
       </div>
