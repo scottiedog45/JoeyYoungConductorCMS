@@ -49,8 +49,6 @@ a
   flex-direction: column
   justify-content: space-between
   height: 50vh
-  @media screen and (max-width: $breakpoint-tablet-width) 
-    height: 65vh
 
 
 
@@ -358,11 +356,14 @@ nav
   @media screen and (max-width: $breakpoint-tablet-width)
     min-width: unset
     width: 100vw
-    height: unset
+    height: 90%
     margin-top: unset !important
-    padding-top: unset
+    padding-top: 7rem !important
+    padding-right: 1.5rem
+    padding-left: 1.5rem
     text-align: unset !important
     background-color: unset !important
+    bottom: unset
   
 
   
@@ -550,15 +551,15 @@ nav
 //burger menu styling
   /* Position and sizing of burger button */
 .bm-burger-button 
-  position: fixed
-  width: 36px
-  height: 30px
-  right: 1.5rem
-  top: 1.5rem
-  display: none
+  visibility: hidden
   @media screen and (max-width: $breakpoint-tablet-width) 
-    display: unset !important
-   
+    visibility: unset
+    position: fixed
+    width: 36px
+    height: 30px
+    right: 1.5rem
+    top: 1.5rem
+    
 
 
 /* Color/shape of burger icon bars */

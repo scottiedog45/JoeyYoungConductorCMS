@@ -7,7 +7,7 @@ const NameHeader = () => (
   </div>
 );
 
-NameHeader.PropTypes = {
+NameHeader.propTypes = {
   name: PropTypes.string
 };
 

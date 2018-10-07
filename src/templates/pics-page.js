@@ -5,7 +5,9 @@ import Images from "../components/Images";
 export const PicPageTemplate = ({ pics }) => (
   <section className="pics-section section--gradient">
     <div className="content pics-page-content">
-      <div className="styledTitle">PHOTOS</div>
+      <div className="content">
+        <div className="styledTitle">PHOTOS</div>
+      </div>
       <Images pics={pics} />
     </div>
   </section>

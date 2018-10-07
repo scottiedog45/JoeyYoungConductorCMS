@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Videos from "../components/Videos";
+import { v4 } from "uuid";
 
 //make this a react component and
 //const changeVid = (e) => {
@@ -15,8 +16,6 @@ class VideoPageTemplate extends React.Component {
   };
 
   changeVid(e) {
-    console.log(e.target.getAttribute("data"));
-    console.log(this.state);
     this.setState({
       src: e.target.getAttribute("data")
     });
@@ -24,7 +23,7 @@ class VideoPageTemplate extends React.Component {
 
   render() {
     let somevids = this.state.vids.map(vid => (
-      <div className="vidListItem">
+      <div key={v4()} className="vidListItem">
         <p data={vid.videoUrl} onClick={e => this.changeVid(e)}>
           {vid.textDescription}
         </p>
@@ -32,12 +31,12 @@ class VideoPageTemplate extends React.Component {
       </div>
     ));
 
-    console.log(this.props);
-
     return (
       <section className="videos-section section section--gradient">
         <div className="content video-content">
-          <div className="styledTitle">VIDEO</div>
+          <div className="content">
+            <div className="styledTitle">VIDEO</div>
+          </div>
           <div className="vidPageContentFlex">
             <div className="vidList">{somevids}</div>
             <iframe
@@ -46,9 +45,8 @@ class VideoPageTemplate extends React.Component {
               height="480"
               scrolling="yes"
               src={this.state.src}
-              frameborder="0"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
+              frameBorder="0"
+              allowFullScreen
             />
           </div>
         </div>
