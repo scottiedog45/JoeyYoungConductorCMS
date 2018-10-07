@@ -1,5 +1,5 @@
 ---
 templateKey: contact
-title: bioasdfasdf
+title: CONTACT
 ---
-This is a contact subtitle. 
+Joseph Young is currently a professor at Peabody Conservatory.
