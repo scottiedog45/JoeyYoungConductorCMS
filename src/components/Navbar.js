@@ -7,7 +7,7 @@ const Navbar = () => (
   <nav className="navbar is-transparent">
     <div className="navbar-start">
       <Link className="navbar-item white" to="/bio">
-        About
+        Bio
       </Link>
       <Link className="navbar-item white" to="/calendar">
         Calendar

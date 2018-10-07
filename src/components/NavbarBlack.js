@@ -7,7 +7,7 @@ const NavbarBlack = () => (
   <nav className="navbar is-transparent">
     <div className="navbar-start">
       <Link className="navbar-item black" to="/bio">
-        About
+        Bio
       </Link>
       <Link className="navbar-item black" to="/calendar">
         Calendar
