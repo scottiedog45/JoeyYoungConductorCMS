@@ -4,16 +4,14 @@ import Content, { HTMLContent } from "../components/Content";
 
 export class ContactPageTemplate extends React.Component {
   render() {
-    console.log(this.props);
-
-    const { title, content, body, contentComponent } = this.props;
+    const { title, content, contentComponent } = this.props;
     const PageContent = contentComponent || Content;
 
     return (
       <div>
         <div className="contactBackgroundContainer" />
         <section className="contact-section section section--gradient">
-          <div className="styledTitle">CONTACT</div>
+          <div className="styledTitle">{title}</div>
           <section className="contact-inner">
             <form className="netlifyForm" name="contact" method="POST" netlify>
               <p>
@@ -35,7 +33,7 @@ export class ContactPageTemplate extends React.Component {
                 <button type="submit">Send</button>
               </p>
             </form>
-            <p>{this.props.body}</p>
+            <PageContent className="content" content={content} />
           </section>
         </section>
       </div>
@@ -74,7 +72,6 @@ export const contactPageQuery = graphql`
       html
       frontmatter {
         title
-        body
       }
     }
   }
