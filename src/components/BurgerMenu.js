@@ -20,7 +20,7 @@ class BurgerMenu extends React.Component {
           Home
         </a>
         <a id="about" className="burger-menu-item" href="/bio">
-          About
+          Bio
         </a>
         <a id="calendar" className="burger-menu-item" href="/calendar">
           Calendar
