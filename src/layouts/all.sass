@@ -337,7 +337,8 @@ nav
     height: 50px
     border: white solid 1px
     background-color: rgba(255, 255, 255, 0.42)
-  textarea
+  textarea  
+    color: white
     width: 100%
     display: block
     height: 50px
@@ -403,6 +404,12 @@ nav
   cursor: pointer
   &:hover
     text-decoration: underline
+  &:after
+    border-bottom: 1px white solid
+    width: 17%
+    position: absolute
+    height: auto
+    content: ""
 
     
 .vidListItem:not(:first-child)
@@ -435,7 +442,7 @@ nav
     margin-top: unset !important
 
 .pics-section
-  margin-top: 15vh !important
+  margin-top: 22vh !important
   background-color: rgba(255, 255, 255, 0.42)
   @media screen and (max-width: $breakpoint-tablet-width)
     padding-right: 1.5rem

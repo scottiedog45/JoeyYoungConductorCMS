@@ -26,7 +26,7 @@ export class ContactPageTemplate extends React.Component {
               </p>
               <p>
                 <label>
-                  Message: <textarea name="message" />
+                  Message: <input name="message" />
                 </label>
               </p>
               <p>
