@@ -8,5 +8,6 @@ pics:
   - image: /img/headshot-2012-jfy.jpg
   - image: /img/img_2605-edit-1.jpg
   - image: /img/b0003985_retouched-copy.jpg
+  - image: /img/joseph-young-3-jeff-roffman-for-the-atlanta-symphony-orchestra.jpg
 ---
 
